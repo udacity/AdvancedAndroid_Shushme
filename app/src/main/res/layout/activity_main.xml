@@ -95,6 +95,7 @@
             </RelativeLayout>
         </LinearLayout>
 
+        <!-- TODO (1) Add a LinearLayout with the permissions CheckBox and UI -->
 
         <Button
             android:layout_width="match_parent"
