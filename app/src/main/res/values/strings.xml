@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ShushMe</string>
+    <string name="add_new_location">Add new location</string>
+    <string name="location_list">Locations</string>
+    <string name="setting_enabled" translatable="false">EnabledSetting</string>
+    <string name="settings_label">Settings</string>
+    <string name="enable_geofences">Enable Geofences</string>
+</resources>

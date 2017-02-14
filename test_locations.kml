@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<Placemark>
+  <name>Queensland Conservatorium Library</name>
+  <description>Library</description>
+  <Point>
+    <coordinates>153.0203,-27.4764,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Starbucks</name>
+  <description>Starbucks</description>
+  <Point>
+    <coordinates>153.0257259,-27.4703356,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Subway</name>
+  <description>Subway</description>
+  <Point>
+    <coordinates>153.0284443,-27.4703445,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Gardens</name>
+  <description>Gardens</description>
+  <Point>
+    <coordinates>153.0298981,-27.4754086,0</coordinates>
+  </Point>
+</Placemark>
+
+
+
+</Document>
+</kml>
