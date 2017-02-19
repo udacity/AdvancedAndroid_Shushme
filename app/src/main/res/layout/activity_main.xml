@@ -59,6 +59,8 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
         </LinearLayout>
 
+        <!-- TODO (6) Add a LinearLayout that contains a checkbox to grant the location permissions
+                        and set the checkbox click listener to call onLocationPermissionClicked -->
 
         <Button
             android:layout_width="match_parent"
