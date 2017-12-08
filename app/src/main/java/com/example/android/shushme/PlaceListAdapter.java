@@ -32,7 +32,6 @@ public class PlaceListAdapter extends RecyclerView.Adapter<PlaceListAdapter.Plac
     private PlaceBuffer mPlaces;
     private static final String TAG = PlaceListAdapter.class.getSimpleName();
 
-    // TODO COMPLETED (4) Take a PlaceBuffer as an input and store it as a local private member mPlaces
     /**
      * Constructor using the context and the db cursor
      *
@@ -66,15 +65,13 @@ public class PlaceListAdapter extends RecyclerView.Adapter<PlaceListAdapter.Plac
      */
     @Override
     public void onBindViewHolder(PlaceViewHolder holder, int position) {
-        // TODO COMPLETED (6) Implement onBindViewHolder to set the view holder's Name and Address text fields
-        // from the Place object at the specified position in mPlaces
+
         String placeName = mPlaces.get(position).getName().toString();
         String placeAddress = mPlaces.get(position).getAddress().toString();
         holder.nameTextView.setText(placeName);
         holder.addressTextView.setText(placeAddress);
     }
 
-    // TODO COMPLETED (7) Implement a public method swapPlaces that replaces the current mPlaces PlaceBuffer with a new one
     public void swapPlaces(PlaceBuffer newPlaces){
         Log.v(TAG, "-> swapPlaces");
 
@@ -85,7 +82,6 @@ public class PlaceListAdapter extends RecyclerView.Adapter<PlaceListAdapter.Plac
         }
     }
 
-    // TODO COMPLETED (5) Update getItemCount to return mPlaces's item count
     /**
      * Returns the number of items in the cursor
      *
