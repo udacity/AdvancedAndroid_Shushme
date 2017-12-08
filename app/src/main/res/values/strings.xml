@@ -8,4 +8,5 @@
     <string name="settings_label">Settings</string>
     <string name="location_permissions">Location Permissions</string>
     <string name="enable_geofences">Enable Geofences</string>
+    <string name="privacy">http://www.google.com/policies/privacy</string>
 </resources>
