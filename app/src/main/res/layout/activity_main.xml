@@ -126,4 +126,6 @@
 
     </LinearLayout>
 
+    <!-- TODO (9) Add the "Powered by Google" logo and a link to Google's privacy policy here -->
+
 </RelativeLayout>
