@@ -64,7 +64,6 @@ public class MainActivity extends AppCompatActivity implements
         mAdapter = new PlaceListAdapter(this);
         mRecyclerView.setAdapter(mAdapter);
 
-        // TODO COMPLETED (4) Create a GoogleApiClient with the LocationServices API and GEO_DATA_API
         // Build up the LocationServices API client
         // Uses the addApi method to request the LocationServices API
         // Also uses enableAutoManage to automatically when to connect/suspend the client
@@ -76,8 +75,6 @@ public class MainActivity extends AppCompatActivity implements
                 .enableAutoManage(this, this)
                 .build();
     }
-
-    // TODO COMPLETED (5) Override onConnected, onConnectionSuspended and onConnectionFailed for GoogleApiClient
 
     /***
      * Called when the Google API Client is successfully connected
@@ -109,7 +106,6 @@ public class MainActivity extends AppCompatActivity implements
         Log.e(TAG, "-> API Client Connection Failed!");
     }
 
-    // TODO COMPLETED (9) Implement the Add Place Button click event to show  a toast message with the permission status
     /***
      * Button Click event handler to handle clicking the "Add new location" Button
      *
@@ -123,10 +119,15 @@ public class MainActivity extends AppCompatActivity implements
             Toast.makeText(this, getString(R.string.need_location_permission_message), Toast.LENGTH_LONG).show();
             return;
         }
+
+        // TODO (1) Create a PlacePicker.IntentBuilder and call startActivityForResult
+        // TODO (2) Handle GooglePlayServices exceptions
         Toast.makeText(this, getString(R.string.location_permissions_granted_message), Toast.LENGTH_LONG).show();
     }
 
-    // TODO COMPLETED (7) Override onResume and inside it initialize the location permissions checkbox
+    // TODO (3) Implement onActivityResult and check that the requestCode is PLACE_PICKER_REQUEST
+    // TODO (4) In onActivityResult, use PlacePicker.getPlace to extract the Place ID and insert it into the DB
+
     @Override
     public void onResume() {
         super.onResume();
@@ -143,7 +144,6 @@ public class MainActivity extends AppCompatActivity implements
         }
     }
 
-    // TODO COMPLETED (8) Implement onLocationPermissionClicked to handle the CheckBox click event
     public void onLocationPermissionClicked(View view) {
         Log.v(TAG, "-> onLocationPermissionClicked");
 
