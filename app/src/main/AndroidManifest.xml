@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.shushme">
 
+    <!-- TODO COMPLETED (2) Add uses-permission tags for INTERNET and ACCESS_FINE_LOCATION -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!-- TODO (1) Add meta-data tag with API key -->
+        <!-- TODO COMPLETED (1) Add meta-data tag with API key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/GOOGLE_API_KEY" />
 
         <activity android:name="com.example.android.shushme.MainActivity">
             <intent-filter>
@@ -24,7 +31,5 @@
             android:exported="false"/>
 
     </application>
-
-    <!-- TODO (2) Add uses-permission tags for INTERNET and ACCESS_FINE_LOCATION -->
 
 </manifest>

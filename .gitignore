@@ -1,5 +1,8 @@
 .DS_Store
 
+# local keystore files
+keystore.properties
+
 # built application files
 *.apk
 *.ap_
