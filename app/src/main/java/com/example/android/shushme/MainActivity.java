@@ -87,12 +87,6 @@ public class MainActivity extends AppCompatActivity implements
         mAdapter = new PlaceListAdapter(this, null);
         mRecyclerView.setAdapter(mAdapter);
 
-        // TODO COMPLETED (9) Create a boolean SharedPreference to store the state of the "Enable Geofences" switch
-        // and initialize the switch based on the value of that SharedPreference
-
-        // TODO COMPLETED (10) Handle the switch's change event and Register/Unregister geofences based on the value of isChecked
-        // as well as set a private boolean mIsEnabled to the current switch's state
-
         // Initialize the switch state and Handle enable/disable switch change
         Switch onOffSwitch = (Switch) findViewById(R.id.enable_switch);
         mIsEnabled = getPreferences(MODE_PRIVATE).getBoolean(getString(R.string.setting_enabled), false);
@@ -122,7 +116,6 @@ public class MainActivity extends AppCompatActivity implements
                 .enableAutoManage(this, this)
                 .build();
 
-        // TODO COMPLETED (8) Create a new instance of Geofencing using "this" as the context and mClient as the client
         mGeofencing = new Geofencing(this, mClient);
     }
 
@@ -182,7 +175,6 @@ public class MainActivity extends AppCompatActivity implements
 
                 mAdapter.swapPlaces(places);
 
-                // TODO COMPLETED (11) Call updateGeofenceList and registerAllGeofences if mIsEnabled is true
                 mGeofencing.updateGeofencesList(places);
                 if (mIsEnabled) mGeofencing.registerAllGeofences();
             }
@@ -264,7 +256,11 @@ public class MainActivity extends AppCompatActivity implements
             locationPermissions.setChecked(true);
             locationPermissions.setEnabled(false);
         }
+
+        //TODO (3) Initialize ringer permissions checkbox
     }
+
+    // TODO (2) Implement onRingerPermissionsClicked to launch ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS
 
     public void onLocationPermissionClicked(View view) {
         Log.v(TAG, "-> onLocationPermissionClicked");

@@ -34,9 +34,6 @@ import com.google.android.gms.location.places.PlaceBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
-// TODO COMPLETED (1) Create a Geofencing class with a Context and GoogleApiClient constructor that
-// initializes a private member ArrayList of Geofences called mGeofenceList
-
 public class Geofencing implements ResultCallback {
 
     // Constants
@@ -55,10 +52,6 @@ public class Geofencing implements ResultCallback {
         mGeofencePendingIntent = null;
         mGeofenceList = new ArrayList<>();
     }
-
-    // TODO COMPLETED (6) Inside Geofencing, implement a public method called registerAllGeofences that
-    // registers the GeofencingRequest by calling LocationServices.GeofencingApi.addGeofences
-    // using the helper functions getGeofencingRequest() and getGeofencePendingIntent()
 
     /***
      * Registers the list of Geofences specified in mGeofenceList with Google Place Services
@@ -88,10 +81,6 @@ public class Geofencing implements ResultCallback {
         }
     }
 
-    // TODO COMPLETED (7) Inside Geofencing, implement a public method called unRegisterAllGeofences that
-    // unregisters all geofences by calling LocationServices.GeofencingApi.removeGeofences
-    // using the helper function getGeofencePendingIntent()
-
     /***
      * Unregisters all the Geofences created by this app from Google Place Services
      * Uses {@code #mGoogleApiClient} to connect to Google Place Services
@@ -116,10 +105,6 @@ public class Geofencing implements ResultCallback {
             Log.e(TAG, securityException.getMessage());
         }
     }
-
-    // TODO COMPLETED (2) Inside Geofencing, implement a public method called updateGeofencesList that
-    // given a PlaceBuffer will create a Geofence object for each Place using Geofence.Builder
-    // and add that Geofence to mGeofenceList
 
     /***
      * Updates the local ArrayList of Geofences using data from the passed in list
@@ -149,9 +134,6 @@ public class Geofencing implements ResultCallback {
         }
     }
 
-    // TODO COMPLETED (3) Inside Geofencing, implement a private helper method called getGeofencingRequest that
-    // uses GeofencingRequest.Builder to return a GeofencingRequest object from the Geofence list
-
     /***
      * Creates a GeofencingRequest object using the mGeofenceList ArrayList of Geofences
      * Used by {@code #registerGeofences}
@@ -166,9 +148,6 @@ public class Geofencing implements ResultCallback {
         builder.addGeofences(mGeofenceList);
         return builder.build();
     }
-
-    // TODO COMPLETED (5) Inside Geofencing, implement a private helper method called getGeofencePendingIntent that
-    // returns a PendingIntent for the GeofenceBroadcastReceiver class
 
     /***
      * Creates a PendingIntent object using the GeofenceTransitionsIntentService class
