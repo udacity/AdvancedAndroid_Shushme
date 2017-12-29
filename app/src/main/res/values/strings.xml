@@ -5,4 +5,7 @@
     <string name="setting_enabled" translatable="false">EnabledSetting</string>
     <string name="settings_label">Settings</string>
     <string name="enable_geofences">Enable Geofences</string>
+    <string name="location_permision_text"> Location Permission</string>
+    <string name="location_permision_need">It\'s need location first</string>
+    <string name="location_permision_granted">Location permission granted</string>>
 </resources>
