@@ -16,10 +16,20 @@ package com.example.android.shushme;
 * limitations under the License.
 */
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
+import android.media.AudioManager;
+import androidx.core.app.NotificationCompat;
+
 import android.util.Log;
+
+import com.google.android.gms.location.Geofence;
+import com.google.android.gms.location.GeofencingEvent;
 
 public class GeofenceBroadcastReceiver extends BroadcastReceiver {
 
